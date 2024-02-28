@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MwiiActivity"
+
+    android:background="@color/splashbg" >
+
+    <TextView
+        android:id="@+id/tvMwiiTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fcvMwii"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="10dp"
+        android:fontFamily="@font/anybody_black"
+        android:text="@string/mwii_title"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@color/custom_light" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvMwii"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMwiiTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mwii_bottomnav"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mwii_navgraph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mwii_bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fcvMwii"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/mwii_menu"
+        android:background="@color/splashbg"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/style_bottomnavitem"
+        app:itemTextColor="@drawable/style_bottomnavitem"
+        app:itemActiveIndicatorStyle="@style/CustomIndicatorStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

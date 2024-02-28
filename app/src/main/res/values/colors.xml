@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splashbg">#0F0F0F</color>
+
+    <color name="custom_light">#E7EBFD</color>
+    <color name="custom_darklight">#AAAAAA</color>
+
+    <color name="custom_primary">#605dff</color>
+    <color name="custom_secondary">#5da8ff</color>
+    <color name="custom_tertiary">#ad63f6</color>
+
+    <color name="weaponcardbg">#1F1F1F</color>
+    <color name="mwweaponbg">#0E0D0D</color>
+    <color name="mwiiweaponbg">#181918</color>
+</resources>

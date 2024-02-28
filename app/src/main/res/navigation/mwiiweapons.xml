@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mwiiweapons"
+    app:startDestination="@id/mwiiweaponsFragment">
+
+    <fragment
+        android:id="@+id/mwiiweaponsFragment"
+        android:name="com.application.callofdutyarmory.fragments.MwiiweaponsFragment"
+        android:label="fragment_mwiiweapons"
+        tools:layout="@layout/fragment_mwiiweapons" >
+        <action
+            android:id="@+id/action_mwiiweaponsFragment_to_mwiiweaponDetailsFragment"
+            app:destination="@id/mwiiweaponDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mwiiweaponDetailsFragment"
+        android:name="com.application.callofdutyarmory.fragments.MwiiweaponDetailsFragment"
+        android:label="fragment_mwiiweapon_details"
+        tools:layout="@layout/fragment_mwiiweapon_details" />
+</navigation>

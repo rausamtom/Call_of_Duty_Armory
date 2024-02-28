@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/mwiiweapons"
+        android:icon="@drawable/logo_mwii"
+        android:title="@string/bottomnav_armory"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/favmwiiweapons"
+        android:icon="@drawable/img_mwiifav"
+        android:title="@string/bottomnav_favweapons"
+        app:showAsAction="ifRoom" />
+
+</menu>

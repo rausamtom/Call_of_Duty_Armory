@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mwweapons"
+    app:startDestination="@id/mwweaponsFragment">
+
+    <fragment
+        android:id="@+id/mwweaponsFragment"
+        android:name="com.application.callofdutyarmory.fragments.MwweaponsFragment"
+        android:label="fragment_mwweapons"
+        tools:layout="@layout/fragment_mwweapons" >
+        <action
+            android:id="@+id/action_mwweaponsFragment_to_mwweaponDetailsFragment"
+            app:destination="@id/mwweaponDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mwweaponDetailsFragment"
+        android:name="com.application.callofdutyarmory.fragments.MwweaponDetailsFragment"
+        android:label="fragment_mwweapon_details"
+        tools:layout="@layout/fragment_mwweapon_details" />
+</navigation>
