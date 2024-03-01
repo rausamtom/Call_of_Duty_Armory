@@ -8,7 +8,7 @@ import com.application.callofdutyarmory.weapons.MwiiWeapon
 private const val DRAWABLE = "drawable"
 
 class MwiiWeaponViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    private val binding = MwiiWeaponBinding.bind(view)
+    val binding = MwiiWeaponBinding.bind(view)
 
     fun render(weaponModel: MwiiWeapon, onClickListener: (MwiiWeapon) -> Unit) {
         val context = binding.ivWeapon.context

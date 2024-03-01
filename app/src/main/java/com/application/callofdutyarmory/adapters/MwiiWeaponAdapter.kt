@@ -5,15 +5,33 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
 import com.application.callofdutyarmory.R
+import com.application.callofdutyarmory.weapons.MwiiWeaponProvider
 
-class MwiiWeaponAdapter (private val weaponList: List<MwiiWeapon>, private val onClickListener: (MwiiWeapon) -> Unit) :RecyclerView.Adapter<MwiiWeaponViewHolder>() {
+class MwiiWeaponAdapter (
+    private val weaponList: List<MwiiWeapon>,
+    private val onClickListener: (MwiiWeapon) -> Unit
+) : RecyclerView.Adapter<MwiiWeaponViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MwiiWeaponViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return MwiiWeaponViewHolder(layoutInflater.inflate(R.layout.mwii_weapon, parent, false))
     }
 
     override fun onBindViewHolder(holder: MwiiWeaponViewHolder, position: Int) {
-        holder.render(weaponList[position], onClickListener)
+        //holder.render(weaponList[position], onClickListener)
+
+        val weaponItem = weaponList[position]
+        holder.render(weaponItem, onClickListener)
+
+        holder.binding.cbAddtofav.isChecked = weaponItem.isFavorite
+        holder.binding.cbAddtofav.setOnCheckedChangeListener { _, isChecked ->
+            val weapon = weaponList.findLast { it == weaponItem }
+            weapon?.isFavorite = isChecked
+            if (isChecked) {
+                MwiiWeaponProvider.favWeaponList.add(weapon!!)
+            } else {
+                MwiiWeaponProvider.favWeaponList.remove(weapon!!)
+            }
+        }
     }
 
     override fun getItemCount(): Int {

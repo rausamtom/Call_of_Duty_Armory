@@ -2,7 +2,7 @@ package com.application.callofdutyarmory.weapons
 
 class MwiiWeaponProvider {
     companion object {
-        val weaponList = listOf<MwiiWeapon>(
+        val weaponList = mutableListOf<MwiiWeapon>(
             MwiiWeapon(
                 "M4",
                 "M4 Platform",
@@ -220,5 +220,6 @@ class MwiiWeaponProvider {
                 "Sweep the battlefield clean with the high fire rate, maneuverability, and exceptional steadiness of this 9mm SMG."
             ),
         )
+        val favWeaponList = mutableListOf<MwiiWeapon>()
     }
 }

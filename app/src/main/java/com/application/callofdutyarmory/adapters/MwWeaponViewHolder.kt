@@ -8,7 +8,7 @@ import com.application.callofdutyarmory.weapons.MwWeapon
 private const val DRAWABLE = "drawable"
 
 class MwWeaponViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    private val binding = MwWeaponBinding.bind(view)
+    val binding = MwWeaponBinding.bind(view)
 
     fun render(weaponModel: MwWeapon, onClickListener: (MwWeapon) -> Unit) {
         val context = binding.ivWeapon.context

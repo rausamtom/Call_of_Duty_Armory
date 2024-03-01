@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.application.callofdutyarmory.R
+import com.application.callofdutyarmory.adapters.MwiiWeaponAdapter
 import com.application.callofdutyarmory.databinding.FragmentFavmwiiweaponsBinding
+import com.application.callofdutyarmory.weapons.MwiiWeapon
+import com.application.callofdutyarmory.weapons.MwiiWeaponProvider
 
 class FavmwiiweaponsFragment : Fragment() {
 
@@ -21,6 +25,17 @@ class FavmwiiweaponsFragment : Fragment() {
 
         _binding = FragmentFavmwiiweaponsBinding.inflate(inflater, container, false)
 
+        initializeRecyclerView()
+
         return binding.root
+    }
+
+    private fun initializeRecyclerView() {
+        val manager = LinearLayoutManager(requireContext())
+        binding.rvMwiifavs.layoutManager = manager
+        binding.rvMwiifavs.adapter = MwiiWeaponAdapter(MwiiWeaponProvider.favWeaponList) { mwiiWeapon -> onItemSelected(mwiiWeapon) }
+    }
+
+    private fun onItemSelected(weapon: MwiiWeapon) {
     }
 }
