@@ -47,9 +47,5 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.application.callofdutyarmory.fragments.AboutFragment"
-        android:label="AboutFragment" >
-        <action
-            android:id="@+id/action_aboutFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
-    </fragment>
+        android:label="AboutFragment" />
 </navigation>

@@ -13,6 +13,7 @@
     <string name="about1_tvInfo2">For more info tap on a weapon to open its hidden details.</string>
     <string name="about2_tvInfo1">You can also mark your favorite weapons to see them later in the favorites section.</string>
     <string name="btnGetStarted">Get started</string>
+    <string name="cbDontShowAgain" translatable="false">Don\'t show this message again</string>
 
     <string name="btnSignOut">Sign Out</string>
     <string name="btnAbout">About</string>
@@ -21,6 +22,4 @@
     <string name="mwii_title">Modern Warfare II Armory</string>
     <string name="bottomnav_armory">Armory</string>
     <string name="bottomnav_favweapons">Favorites</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

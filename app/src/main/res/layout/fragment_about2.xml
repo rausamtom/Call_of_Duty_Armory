@@ -51,11 +51,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivFavpv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cbDontshowagain"
         android:backgroundTint="@color/custom_secondary"
         android:fontFamily="@font/anybody_black"
         android:text="@string/btnGetStarted"
         android:textColor="@color/custom_light"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/cbDontshowagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetStarted"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/cbDontShowAgain"
+        android:textColor="@color/custom_darklight"
         android:textSize="16sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

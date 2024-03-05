@@ -3,6 +3,7 @@ package com.application.callofdutyarmory.adapters
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
+import android.widget.Toast
 import com.application.callofdutyarmory.R
 import com.application.callofdutyarmory.weapons.MwWeapon
 import com.application.callofdutyarmory.weapons.MwWeaponProvider
@@ -28,8 +29,10 @@ class MwWeaponAdapter (
             weapon?.isFavorite = isChecked
             if (isChecked) {
                 MwWeaponProvider.favWeaponList.add(weapon!!)
+                Toast.makeText(holder.itemView.context, "${weaponItem.weapon} added to Favorites", Toast.LENGTH_SHORT).show()
             } else {
                 MwWeaponProvider.favWeaponList.remove(weapon!!)
+                Toast.makeText(holder.itemView.context, "${weaponItem.weapon} removed from Favorites", Toast.LENGTH_SHORT).show()
             }
         }
     }

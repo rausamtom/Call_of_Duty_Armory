@@ -4,6 +4,7 @@ import com.application.callofdutyarmory.weapons.MwiiWeapon
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
+import android.widget.Toast
 import com.application.callofdutyarmory.R
 import com.application.callofdutyarmory.weapons.MwiiWeaponProvider
 
@@ -28,8 +29,10 @@ class MwiiWeaponAdapter (
             weapon?.isFavorite = isChecked
             if (isChecked) {
                 MwiiWeaponProvider.favWeaponList.add(weapon!!)
+                Toast.makeText(holder.itemView.context, "${weaponItem.weapon} added to Favorites", Toast.LENGTH_SHORT).show()
             } else {
                 MwiiWeaponProvider.favWeaponList.remove(weapon!!)
+                Toast.makeText(holder.itemView.context, "${weaponItem.weapon} removed from Favorites", Toast.LENGTH_SHORT).show()
             }
         }
     }
