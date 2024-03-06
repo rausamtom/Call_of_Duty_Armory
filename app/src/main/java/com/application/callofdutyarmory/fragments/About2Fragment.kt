@@ -23,13 +23,13 @@ class About2Fragment : Fragment() {
         _binding = FragmentAbout2Binding.inflate(inflater, container, false)
 
         binding.btnGetStarted.setOnClickListener {
-            closeFragment()
+            findNavController().navigate(R.id.action_aboutFragment_to_menuFragment)
         }
 
         return binding.root
     }
 
-    private fun closeFragment() {
+    /*private fun closeFragment() {
         requireActivity().supportFragmentManager.popBackStack()
-    }
+    }*/
 }

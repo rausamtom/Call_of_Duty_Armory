@@ -1,8 +1,12 @@
 package com.application.callofdutyarmory
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.datastore.preferences.preferencesDataStore
 import com.application.callofdutyarmory.databinding.ActivityMainBinding
+
+val Context.dataStore by preferencesDataStore(name = "USER_PREFERENCES")
 
 class MainActivity : AppCompatActivity() {
 

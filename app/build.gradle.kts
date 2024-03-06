@@ -61,5 +61,12 @@ dependencies {
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
 
+
+    /** VIEWPAGER **/
     implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+
+    /** DATASTORE **/
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0")
 }

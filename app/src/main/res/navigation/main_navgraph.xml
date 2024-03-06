@@ -21,8 +21,8 @@
         android:label="fragment_signin"
         tools:layout="@layout/fragment_signin" >
         <action
-            android:id="@+id/action_signinFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            android:id="@+id/action_signinFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -47,5 +47,9 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.application.callofdutyarmory.fragments.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="AboutFragment" >
+        <action
+            android:id="@+id/action_aboutFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
 </navigation>
